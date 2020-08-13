@@ -1,0 +1,199 @@
+@import "nulling-styles";
+@import "fonts";
+
+body {
+    font-family: "Ruda-Regular";
+}
+
+%widthLink {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.page-wrap {
+    padding-top: 30px;
+    &__container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+    &__info {
+        position: fixed;
+        width: 220px;
+    }
+    &__view {
+        &-photo {
+            background: url(../img/connection/My-Photo.jpg) center/cover no-repeat;
+            background-position-y: 45% !important;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            width: 141px;
+            height: 141px;
+        }
+        @keyframes blink_cursor {
+            0%, 49% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+        }
+        &-link {
+            font-family: "Roboto-Medium";
+            color: #83b620;
+            line-height: 1.7em;
+            font-size: 16px;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 12px;
+                height: 19px;
+                background-color: #83b620;
+                margin-left: 8px;
+                transform: translateY(3px);
+                animation: blink_cursor 1.9s infinite;
+            }
+            & span {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__about {
+        &-title {
+            font-family: "Ruda-Medium";
+            text-transform: uppercase;
+            line-height: 35px;
+            margin-top: 20px;
+            color: #333333;
+            font-size: 1em;
+        }
+        &-text {
+            color: #7d7d7b;
+            line-height: 1.6em;
+            font-size: 16px;
+        }
+    }
+    &__connection {
+        &-indents {
+            display: flex;
+            margin-top: 15px;
+        }
+        &-git,.page-wrap__connection-vk,.page-wrap__connection-in,.page-wrap__connection-mail,.page-wrap__connection-hh {
+            margin-left: 10px;
+        }
+        &-git {
+            margin-left: 0;
+        }
+        &-git span {
+            background: url(../img/connection/github.svg) center/cover;
+            @extend %widthLink;
+        }
+        &-vk span {
+            background: url(../img/connection/vk.svg) center/cover;
+            @extend %widthLink;
+        }
+        &-in span {
+            background: url(../img/connection/linkedin.svg) center/cover;
+            @extend %widthLink;
+        }
+        &-mail {
+            background: url(../img/connection/email.svg) center/cover;
+            cursor: pointer;
+            @extend %widthLink;
+        }
+        &-hh span {
+            background: url(../img/connection/HeadHunter.png) center/cover;
+            @extend %widthLink;
+        }
+        &-surfacing {
+            border: 1px solid black;
+            position: relative;
+            border-radius: 5px;
+            height: 31px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            &Angle {
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                border-top: 1px solid black;
+                border-right: 1px solid black;
+                transform: rotate(-45deg);
+                z-index: 10;
+                position: absolute;
+                top: -6px;
+                margin-left: 4px;
+            }
+        }
+    }
+}
+.showMail {
+    display: flex;
+}
+.content {
+    margin-bottom: 25px;
+    &__container {
+        width: 1080px;
+        margin: 0 auto;
+    }
+    &__comumns {
+        width: 756px;
+        margin-left: auto;
+    }
+    &__inner {
+        padding: 10px 0;
+        border-bottom: 1px solid #e4e4e4;
+        &-title {
+            font-weight: 600;
+            font-size: 2em;
+            line-height: 1em;
+        }
+    }
+    &__post {
+        border-bottom: 1px solid gainsboro;
+        margin-top: 40px;
+        &-title {
+            margin-bottom: 17px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        &-list {
+            display: flex;
+        }
+        &-list li {
+            font-size: 0.95em;
+            line-height: 1em;
+            background: #888;
+            color: #fff;
+            padding: 6px;
+            border-radius: 3px;
+            margin: 0 5px 5px 0;
+        }
+    }
+    &__description {
+        display: flow-root;
+        padding-bottom: 15px;
+        margin-top: 15px;
+        &-img {
+            border: 1px solid #afafaf;
+            margin-right: 15px;
+            float: left;
+            width: 364px;
+            height: 219px;
+        }
+        &-text {
+            text-align: justify;
+            word-break: break-word;
+            margin-bottom: 6px;
+            line-height: 1.7em;
+            font-size: 18px;
+            color: #515151;
+        }
+        &-text span {
+            font-weight: bold;
+            margin-right: 15px;
+        }
+    }
+}
