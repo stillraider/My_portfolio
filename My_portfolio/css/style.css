@@ -358,7 +358,3 @@ body {
   font-weight: bold;
   margin-right: 15px;
 }
-
-.webp .page-wrap__view-photo{ background: url(../img/connection/My-Photo.webp) center/cover no-repeat; }
-
-.webp .page-wrap__connection-hh span{ background: url(../img/connection/HeadHunter.webp) center/cover; }

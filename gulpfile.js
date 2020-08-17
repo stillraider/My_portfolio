@@ -14,7 +14,7 @@ let path = {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         css : source_folder + "/scss/style.scss",
         js: source_folder + "/scripts/*.js",
-        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,docx,pdf}",
         fonts: source_folder + "/fonts/*",
     },
     watch: {
@@ -40,7 +40,7 @@ let { src, dest } = require("gulp"),
     imagemon = require("gulp-imagemin");
     webp = require("gulp-webp");
     webphtml = require("gulp-webp-html");
-    webpcss = require("gulp-webpcss");
+    // webpcss = require("gulp-webpcss");
     ttf2woff = require("gulp-ttf2woff");
     ttf2woff2 = require("gulp-ttf2woff2");
 
@@ -78,7 +78,7 @@ function css (params) {
             cascade: true
         })
     )
-    .pipe(webpcss())
+    // .pipe(webpcss())
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(
